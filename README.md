@@ -35,3 +35,4 @@ npm run test:alerts
 ```
 
 Copie os arquivos `.env.example` para `.env` somente localmente. No GitHub, Vercel e Render, configure as variáveis de ambiente diretamente na plataforma.
+# app-temperatura
