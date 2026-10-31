@@ -15,6 +15,12 @@ No Render, crie um Web Service apontando para o mesmo repositório. Use `apps/ba
 
 Configure `MONGODB_URI` como variável secreta no Render. Nunca coloque a URI real no frontend ou no GitHub.
 
+Na Vercel, configure a variável `EXPO_PUBLIC_API_URL` com:
+
+```text
+https://app-temperatura.onrender.com
+```
+
 ## Execução local
 
 ```powershell
