@@ -9,6 +9,6 @@
     "ios": { "supportsTablet": true },
     "android": { "adaptiveIcon": { "backgroundColor": "#123149" } },
     "plugins": ["expo-notifications", "expo-location"],
-    "web": { "bundler": "metro", "favicon": "./assets/favicon.svg" }
+    "web": { "bundler": "metro", "favicon": "./assets/favicon.png" }
   }
 }
