@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Protege Vidros",
+    "slug": "protege-vidros",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#F4F8FB" },
+    "ios": { "supportsTablet": true },
+    "android": { "adaptiveIcon": { "backgroundColor": "#123149" } },
+    "plugins": ["expo-notifications", "expo-location"],
+    "web": { "bundler": "metro" }
+  }
+}

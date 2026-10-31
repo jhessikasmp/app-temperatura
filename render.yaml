@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: app-temperatura-api
+    runtime: node
+    rootDir: apps/backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: App_Temperatura
+      - key: PORT
+        value: 10000

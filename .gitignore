@@ -1,0 +1,12 @@
+node_modules/
+**/node_modules/
+.expo/
+**/.expo/
+dist/
+**/dist/
+.env
+**/.env
+.vercel/
+*.log
+*.local
+coverage/
