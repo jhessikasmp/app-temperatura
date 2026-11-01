@@ -3,12 +3,23 @@
     "name": "Protege Vidros",
     "slug": "protege-vidros",
     "version": "1.0.0",
+    "android": {
+      "package": "com.jhessikasmp.protegevidros",
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "POST_NOTIFICATIONS"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon.png",
+        "backgroundColor": "#123149"
+      }
+    },
+    "icon": "./assets/favicon.png",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "splash": { "backgroundColor": "#F4F8FB" },
     "ios": { "supportsTablet": true },
-    "android": { "adaptiveIcon": { "backgroundColor": "#123149" } },
-    "plugins": ["expo-notifications", "expo-location"],
+    "plugins": [
+      ["expo-notifications", { "icon": "./assets/favicon.png", "color": "#123149" }],
+      ["expo-location", { "locationWhenInUsePermission": "Permita que o Protege Vidros use sua localização para consultar o clima local." }]
+    ],
     "web": { "bundler": "metro", "favicon": "./assets/favicon.png" }
   }
 }
