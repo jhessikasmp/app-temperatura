@@ -5,7 +5,7 @@ const IDS_KEY = '@protege-vidros/alert-ids';
 
 export function configureNotifications() {
   Notifications.setNotificationHandler({ handleNotification: async () => ({ shouldPlaySound: true, shouldSetBadge: true, shouldShowBanner: true, shouldShowList: true }) });
-  Notifications.setNotificationChannelAsync('frost-alerts', { name: 'Alertas de congelamento', importance: Notifications.AndroidImportance.MAX, sound: 'default', vibrationPattern: [0, 500, 250, 500] });
+  void Notifications.setNotificationChannelAsync('frost-alerts', { name: 'Alertas de congelamento', importance: Notifications.AndroidImportance.MAX, sound: 'default', vibrationPattern: [0, 500, 250, 500] });
 }
 
 export function listenForAlertConfirmation(onConfirmed: () => void) {
@@ -35,7 +35,7 @@ export async function scheduleRepeatedFrostAlerts(hour: number, minute: number, 
     const date = new Date(now);
     date.setDate(now.getDate() + 1);
     date.setHours(hour, minute + index * 20, 0, 0);
-    const id = await Notifications.scheduleNotificationAsync({ content: { title, body, sound: 'default', data: { frostAlert: true }, android: { channelId: 'frost-alerts' } }, trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date } });
+    const id = await Notifications.scheduleNotificationAsync({ content: { title, body, sound: 'default', data: { frostAlert: true } }, trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date, channelId: 'frost-alerts' } });
     ids.push(id);
   }
   await AsyncStorage.setItem(IDS_KEY, JSON.stringify(ids));
